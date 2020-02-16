@@ -8,3 +8,8 @@ clear();
 console.log(
   chalk.yellow(figlet.textSync("Wapi", { horizontalLayout: "full" }))
 );
+
+if (files.directoryExists(".git")) {
+  console.log(chalk.red("Already a Git repository!"));
+  process.exit();
+}
